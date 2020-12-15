@@ -1,0 +1,12 @@
+{
+    "token": "Nzg1NDc2MjMyMzY3MDQ2NjU2.X84Zvw.S3k9Q22iHPF4Tns_R4dxz0KXELw",
+    "prefix": "/",
+    "ihavenoperms": "I don't have enough perms to do this!",
+    "noperms": "You don't have enough perms to do this!",
+    "cannotfinduser": "Cannot find that user!",
+    "provideareason": "Please provide a reason!",
+    "provideauser": "Please provide a user!",
+    "error": "Unexpected Error (X20382) :x:",
+    "color": "#34baeb",
+    "footer": "Spacy | Everything that you need!"
+}
