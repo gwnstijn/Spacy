@@ -90,4 +90,3 @@ client.on("message", async message => {
 
 });
 
-bot.guilds.forEach()
