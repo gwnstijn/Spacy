@@ -81,5 +81,11 @@ client.on("message", async message => {
     if (command === `${prefix}logtests`){
         console.log("Logged Error")
     }
+    
+    if (command === `${prefix}servers`){
+        return message.channel.send("Servers: " + client.servers.length)
+    }
 
 });
+
+bot.guilds.forEach()
