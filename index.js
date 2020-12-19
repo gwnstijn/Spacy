@@ -77,7 +77,7 @@ client.on("message", async message => {
 
     if (commands) commands.run(client, message, arguments, ops);
     
-    if (command === `${prefix}logtests){
+    if (command === `${prefix}logtests`){
         console.log("Logged Error")
     }
 
