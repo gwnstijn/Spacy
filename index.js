@@ -45,10 +45,12 @@ client.on("ready", async () => {
 // Guild Create Event
 client.on("guildCreate", function(guild){
 
+    console.log("I'm added to a new server!")
+    
     const JoinEmbed = new discord.MessageEmbed()
      .setTitle("Thanks for adding me! :partying_face:")
      .setDescription("**-** My prefix is **/**!\n**-** Type **/help** for a list off commands!\n\n**-** Invite Me!\n https://discord.com/api/oauth2/authorize?client_id=785476232367046656&permissions=8&redirect_uri=http%3A%2F%2Flocalhost%2Fcallback&scope=bot\n\n**-** Support Server\n https://discord.gg/KKprHha7");
-
+    
 
     guild.channels.cache.filter(c => c.type === 'text').find(p => p.position === 0).send(JoinEmbed);
 });
