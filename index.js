@@ -38,15 +38,21 @@ client.on("ready", async () => {
  
     console.log(`${client.user.username} is online.`);
  
-    client.user.setActivity("portal.gwnstijn.com", { type: "PLAYING" });
+    client.user.setActivity(`Serving ${client.guilds.size} servers`);
  
+});
+
+client.on("guildDelete", guild => {
+  // this event triggers when the bot is removed from a guild.
+  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+  client.user.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 // Guild Create Event
 client.on("guildCreate", function(guild){
 
     console.log("I'm added to a new server!")
-    
+    client.user.setActivity(`Serving ${client.guilds.size} servers`);
     const JoinEmbed = new discord.MessageEmbed()
      .setTitle("Thanks for adding me! :partying_face:")
      .setDescription("**-** My prefix is **/**!\n**-** Type **/help** for a list off commands!\n\n**-** Invite Me!\n https://discord.com/api/oauth2/authorize?client_id=785476232367046656&permissions=8&redirect_uri=http%3A%2F%2Flocalhost%2Fcallback&scope=bot\n\n**-** Support Server\n https://discord.gg/KKprHha7");
@@ -85,7 +91,7 @@ client.on("message", async message => {
     }
     
     if (command === `${prefix}servers`){
-        return message.channel.send("Servers: " + client.servers.length)
+        return message.channel.send(`Serving ${client.guilds.size} servers`)
     }
 
 });
